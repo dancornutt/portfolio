@@ -5,12 +5,14 @@ import Button from 'react-bootstrap/Button';
 const Project = (props) => {
     return (
         <Jumbotron>
-        <h1>Project Title</h1>
+        <h1>{props.title}</h1>
+        <img src={props.imagePath}/>
         <p>
-            This is a simple a simple description on the project
+            {props.description}
         </p>
         <p>
-            <Button variant="primary">Learn more</Button>
+            <Button href={props.deployedURL} variant="primary">Deployed Link</Button>
+            <Button href={props.githubURL} variant="secondary">Public Repo</Button>
         </p>
         </Jumbotron>
     )
